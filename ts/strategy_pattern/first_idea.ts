@@ -9,51 +9,56 @@
  2. 시스템 규모가 커질 경우 함수 중복 및 유지보수 어려울 수 있기 때문.
  */
 
+/**
+ * 처음 시도해 본 전략패턴. 하지만 부족한 점이 너무나 많다.
+ */
 
 interface Hobby {
     doing(): void
 }
 
+
 class Youtube implements Hobby {
-    public doing(): string {
+    doing(): string {
         return '아이패드로 유튜브 시청'
     }
 }
 
+
 class Netflix implements Hobby{
-    public doing(): string {
-        return 'Netflix 로 미생 몰아 보시청기'
+    doing(): string {
+        return 'Netflix 로 미생 몰아 시청'
     }
 }
 
 class Game implements Hobby{
-    public doing(): string {
+    doing(): string {
         return '피씨방 가서 WOW Classic'
     }
 }
 
 class Drawing implements Hobby{
-    public doing(): string {
+    doing(): string {
         return '아이패드로 그림 연습'
     }
 }
 
 class Book implements Hobby{
-    public doing(): string {
+    doing(): string {
         return '노래 들으면서 1일1클래식 정독'
     }
 }
 
 class Etc implements Hobby{
-    public doing(): string {
+    doing(): string {
          return '다른 할 거 뭐 없나 찾아 보기'
     }
 }
 
 class Weekend {
-    public name: string;
-    public dayOff: string;
-    public hobby: Hobby;
+    name: string;
+    dayOff: string;
+    hobby: Hobby;
 
     constructor(name:string, dayOff: string, hobby: Hobby) {
         this.name = name
@@ -64,7 +69,6 @@ class Weekend {
     rest():void{
         console.log(`${this.name}는 ${this.dayOff}에 [${this.hobby.doing()}]를(을) 하기로 결정했다`)
     }
-
 }
 
 const Lucia = new Weekend('루시아','일요일', new Game())
