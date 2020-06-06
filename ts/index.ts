@@ -1,5 +1,6 @@
 import {BurgerMenu} from "./decorator_pattern/BurgerMenu";
-import {tumblerOrder} from "./abstractFactory_pattern/abstractFactory";
+import {tumblerOrder} from "./abstractFactory_pattern/Client/tumblerOrder";
+
 
 abstract class Play {
     abstract main(): void;
