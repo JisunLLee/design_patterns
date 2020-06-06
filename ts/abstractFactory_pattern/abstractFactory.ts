@@ -1,3 +1,9 @@
+import {Burger} from "../decorator_pattern/Burger";
+import {BeefBurger} from "../decorator_pattern/BeefBurger";
+import {ChickenBurger} from "../decorator_pattern/ChickenBurger";
+import {Cheese} from "../decorator_pattern/Cheese";
+import {Bacon} from "../decorator_pattern/Bacon";
+import {Tomato} from "../decorator_pattern/tomato";
 
 interface ITumbler {
     characteristic():string
@@ -141,5 +147,12 @@ class ClientTumblerFactory {
     }
 }
 
-const starbucks = new ClientTumblerFactory(new StarbucksFactory())
-starbucks.createTumbler()
+
+
+export class tumblerOrder {
+    public main():void {
+        const starbucks = new ClientTumblerFactory(new StarbucksFactory())
+
+        console.log(starbucks.createTumbler())
+    }
+}
