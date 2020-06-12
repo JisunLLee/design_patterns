@@ -17,5 +17,11 @@ export class MainScore {
         console.log("myScore.score: ", myScore.score)   // myScore:  1
         console.log("myScore2.score: ", myScore2.score) // myScore2:  1
         console.log("Is same? ", myScore === myScore2)  // Is same?  true
+
+        if (myScore === myScore2) {
+            console.log('Singleton 정상 작동. 두 변수는 같은 객체를 바라 봄.');
+        } else {
+            console.error('Singleton 실패. 변수가 서로 다른 객체를 바라 봄.');
+        }
     }
 }
