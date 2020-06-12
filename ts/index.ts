@@ -1,5 +1,6 @@
 import {BurgerMenu} from "./decorator_pattern/BurgerMenu";
 import {tumblerOrder} from "./abstractFactory_pattern/Client/tumblerOrder";
+import {MainScore} from "./singleton_pattern/MainScore";
 
 
 abstract class Play {
@@ -22,3 +23,6 @@ draw(decorator, "decorator");
 
 const abstractFactory = new tumblerOrder();
 draw(abstractFactory, "abstractFactory");
+
+const singleton = new MainScore()
+draw(singleton, "singleton")
